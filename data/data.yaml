@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 7
+names: ['block', 'coin', 'platform', 'player', 'portal', 'spaceship', 'spike']
+
+roboflow:
+  workspace: kartikjoshiobjectdetection
+  project: my-first-project-2nkax
+  version: 6
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kartikjoshiobjectdetection/my-first-project-2nkax/dataset/6

@@ -1,46 +1,24 @@
+# Large model files (use Git LFS or download separately)
+*.pt
+models/
+
+# Training runs with weights
+runs/*/weights/
+
+# macOS
+.DS_Store
+
 # Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
+*.pyc
+*.pyo
+.env
 venv/
-env/
-ENV/
-.venv
+.venv/
+
+# Videos (large files)
+*.mp4
 
 # IDE
-.vscode/
 .idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Environment variables
-.env
-.env.local
-
-# Logs
-*.log
-
+.vscode/

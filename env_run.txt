@@ -1,0 +1,624 @@
+Registered GeometryDash-v0
+Initializing Geometry Dash Environment...
+Loading YOLO Model from: models/roboflow_model/weights.pt
+YOLO model loaded!
+Created environment
+
+0: 416x640 (no detections), 329.9ms
+Speed: 1.4ms preprocess, 329.9ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 393.9ms
+Speed: 2.2ms preprocess, 393.9ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.9ms
+Speed: 1.9ms preprocess, 314.9ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 319.2ms
+Speed: 2.1ms preprocess, 319.2ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 312.8ms
+Speed: 1.8ms preprocess, 312.8ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.5ms
+Speed: 2.3ms preprocess, 318.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.9ms
+Speed: 2.1ms preprocess, 317.9ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 324.0ms
+Speed: 1.7ms preprocess, 324.0ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.9ms
+Speed: 2.3ms preprocess, 318.9ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 330.2ms
+Speed: 2.0ms preprocess, 330.2ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 (no detections), 319.5ms
+Speed: 3.6ms preprocess, 319.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.7ms
+Speed: 2.0ms preprocess, 314.7ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 321.2ms
+Speed: 2.4ms preprocess, 321.2ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.3ms
+Speed: 2.1ms preprocess, 314.3ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 315.2ms
+Speed: 2.1ms preprocess, 315.2ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 315.1ms
+Speed: 2.1ms preprocess, 315.1ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.4ms
+Speed: 2.1ms preprocess, 318.4ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 333.5ms
+Speed: 1.8ms preprocess, 333.5ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 331.4ms
+Speed: 2.0ms preprocess, 331.4ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.1ms
+Speed: 1.8ms preprocess, 314.1ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 (no detections), 325.5ms
+Speed: 4.2ms preprocess, 325.5ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 322.4ms
+Speed: 1.9ms preprocess, 322.4ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 321.7ms
+Speed: 2.4ms preprocess, 321.7ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.5ms
+Speed: 2.1ms preprocess, 317.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.0ms
+Speed: 2.1ms preprocess, 318.0ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 320.1ms
+Speed: 2.0ms preprocess, 320.1ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.4ms
+Speed: 2.2ms preprocess, 314.4ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 312.8ms
+Speed: 2.2ms preprocess, 312.8ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.4ms
+Speed: 2.5ms preprocess, 314.4ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 320.0ms
+Speed: 2.1ms preprocess, 320.0ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 (no detections), 328.5ms
+Speed: 2.3ms preprocess, 328.5ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 323.2ms
+Speed: 1.9ms preprocess, 323.2ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 327.1ms
+Speed: 2.1ms preprocess, 327.1ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 308.3ms
+Speed: 2.4ms preprocess, 308.3ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 321.7ms
+Speed: 1.9ms preprocess, 321.7ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 322.3ms
+Speed: 2.0ms preprocess, 322.3ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.3ms
+Speed: 2.1ms preprocess, 318.3ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 321.7ms
+Speed: 1.9ms preprocess, 321.7ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 322.7ms
+Speed: 2.1ms preprocess, 322.7ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 393.8ms
+Speed: 2.3ms preprocess, 393.8ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 1 spike, 325.1ms
+Speed: 3.4ms preprocess, 325.1ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.1ms
+Speed: 1.9ms preprocess, 317.1ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 325.9ms
+Speed: 2.3ms preprocess, 325.9ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 313.5ms
+Speed: 2.0ms preprocess, 313.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 322.0ms
+Speed: 2.0ms preprocess, 322.0ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 313.8ms
+Speed: 2.0ms preprocess, 313.8ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 313.0ms
+Speed: 2.1ms preprocess, 313.0ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 326.3ms
+Speed: 1.8ms preprocess, 326.3ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 316.9ms
+Speed: 2.2ms preprocess, 316.9ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 311.8ms
+Speed: 2.5ms preprocess, 311.8ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 1 spike, 322.3ms
+Speed: 4.0ms preprocess, 322.3ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.8ms
+Speed: 1.9ms preprocess, 314.8ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 324.0ms
+Speed: 2.1ms preprocess, 324.0ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.4ms
+Speed: 2.0ms preprocess, 314.4ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.8ms
+Speed: 2.0ms preprocess, 317.8ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.5ms
+Speed: 2.1ms preprocess, 317.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.9ms
+Speed: 1.9ms preprocess, 314.9ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 315.9ms
+Speed: 2.2ms preprocess, 315.9ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 383.3ms
+Speed: 2.5ms preprocess, 383.3ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 404.5ms
+Speed: 1.5ms preprocess, 404.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 1 spike, 322.2ms
+Speed: 4.1ms preprocess, 322.2ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 320.0ms
+Speed: 1.9ms preprocess, 320.0ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 320.5ms
+Speed: 2.1ms preprocess, 320.5ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.6ms
+Speed: 2.1ms preprocess, 317.6ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.5ms
+Speed: 2.0ms preprocess, 318.5ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.6ms
+Speed: 2.5ms preprocess, 314.6ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 316.8ms
+Speed: 2.1ms preprocess, 316.8ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 316.5ms
+Speed: 1.9ms preprocess, 316.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.2ms
+Speed: 2.0ms preprocess, 314.2ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.7ms
+Speed: 2.2ms preprocess, 314.7ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 1 spike, 325.4ms
+Speed: 3.7ms preprocess, 325.4ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 310.8ms
+Speed: 2.4ms preprocess, 310.8ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 321.1ms
+Speed: 2.1ms preprocess, 321.1ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.4ms
+Speed: 2.1ms preprocess, 317.4ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 315.4ms
+Speed: 2.1ms preprocess, 315.4ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.7ms
+Speed: 2.5ms preprocess, 314.7ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.8ms
+Speed: 2.1ms preprocess, 314.8ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 320.9ms
+Speed: 1.8ms preprocess, 320.9ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 314.3ms
+Speed: 2.1ms preprocess, 314.3ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 313.3ms
+Speed: 2.3ms preprocess, 313.3ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 (no detections), 314.6ms
+Speed: 2.4ms preprocess, 314.6ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2061629593372345, Restart match: 0.19175772368907928
+
+0: 416x640 1 spike, 319.8ms
+Speed: 4.8ms preprocess, 319.8ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 319.2ms
+Speed: 2.1ms preprocess, 319.2ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 320.7ms
+Speed: 2.1ms preprocess, 320.7ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 322.1ms
+Speed: 2.1ms preprocess, 322.1ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 323.1ms
+Speed: 2.1ms preprocess, 323.1ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.5ms
+Speed: 2.1ms preprocess, 317.5ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 331.7ms
+Speed: 2.4ms preprocess, 331.7ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 316.1ms
+Speed: 1.9ms preprocess, 316.1ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 317.6ms
+Speed: 2.5ms preprocess, 317.6ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 312.5ms
+Speed: 2.1ms preprocess, 312.5ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 (no detections), 320.2ms
+Speed: 2.1ms preprocess, 320.2ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2061624825000763, Restart match: 0.19175772368907928
+
+0: 416x640 1 spike, 327.6ms
+Speed: 6.1ms preprocess, 327.6ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 304.6ms
+Speed: 1.3ms preprocess, 304.6ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 323.1ms
+Speed: 2.2ms preprocess, 323.1ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 315.8ms
+Speed: 2.1ms preprocess, 315.8ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 331.2ms
+Speed: 2.2ms preprocess, 331.2ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 320.5ms
+Speed: 2.6ms preprocess, 320.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 316.4ms
+Speed: 2.2ms preprocess, 316.4ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 315.1ms
+Speed: 1.9ms preprocess, 315.1ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.0ms
+Speed: 2.2ms preprocess, 318.0ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 316.6ms
+Speed: 2.2ms preprocess, 316.6ms inference, 0.4ms postprocess per image at shape (1, 3, 416, 640)
+Warning: Player not detected after 10 attempts in reset()
+
+0: 416x640 (no detections), 313.5ms
+Speed: 2.1ms preprocess, 313.5ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2061638981103897, Restart match: 0.19175772368907928
+Initializing Geometry Dash Environment...
+Loading YOLO Model from: models/roboflow_model/weights.pt
+YOLO model loaded!
+Environment is valid
+
+--- TEST: PLAYING 50 FRAMES ---
+Game starting in 2 seconds
+
+0: 416x640 1 spike, 326.6ms
+Speed: 3.5ms preprocess, 326.6ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 318.0ms
+Speed: 2.3ms preprocess, 318.0ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 322.3ms
+Speed: 2.4ms preprocess, 322.3ms inference, 0.3ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 (no detections), 555.6ms
+Speed: 2.6ms preprocess, 555.6ms inference, 0.2ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 coin, 2 players, 2 portals, 1 spike, 422.1ms
+Speed: 2.8ms preprocess, 422.1ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 coin, 2 players, 2 portals, 1 spike, 320.0ms
+Speed: 1.8ms preprocess, 320.0ms inference, 1.0ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.9999693036079407, Restart match: 0.999984860420227
+Step 0: Action=1, Reward=-100.0, Dead=True, Attempts=11
+
+0: 416x640 2 blocks, 1 coin, 2 players, 2 portals, 1 spike, 334.0ms
+Speed: 5.2ms preprocess, 334.0ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 320.4ms
+Speed: 1.6ms preprocess, 320.4ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.23672673106193542, Restart match: 0.1998962014913559
+Step 1: Action=1, Reward=1.0, Dead=False, Attempts=12
+
+0: 416x640 1 block, 1 player, 1 spike, 315.4ms
+Speed: 1.4ms preprocess, 315.4ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2518343925476074, Restart match: 0.2119847983121872
+Step 2: Action=0, Reward=1.0, Dead=False, Attempts=12
+
+0: 416x640 1 block, 1 player, 1 spike, 312.0ms
+Speed: 1.5ms preprocess, 312.0ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2550472915172577, Restart match: 0.2009371966123581
+Step 3: Action=1, Reward=1.0, Dead=False, Attempts=12
+
+0: 416x640 1 block, 1 player, 2 spikes, 319.2ms
+Speed: 1.5ms preprocess, 319.2ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2473987489938736, Restart match: 0.21915258467197418
+Step 4: Action=0, Reward=1.0, Dead=False, Attempts=12
+
+0: 416x640 1 block, 1 player, 2 spikes, 323.5ms
+Speed: 1.5ms preprocess, 323.5ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24523189663887024, Restart match: 0.19575321674346924
+Step 5: Action=0, Reward=1.0, Dead=False, Attempts=12
+
+0: 416x640 1 block, 5 players, 2 spikes, 314.2ms
+Speed: 1.4ms preprocess, 314.2ms inference, 1.1ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.28677353262901306, Restart match: 0.2395412176847458
+Step 6: Action=0, Reward=1.0, Dead=False, Attempts=12
+
+0: 416x640 1 block, 1 coin, 3 players, 2 portals, 1 spaceship, 312.7ms
+Speed: 1.3ms preprocess, 312.7ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.880434513092041, Restart match: 0.8762049674987793
+Step 7: Action=0, Reward=-100.0, Dead=True, Attempts=12
+
+0: 416x640 1 coin, 1 player, 2 portals, 1 spike, 333.6ms
+Speed: 5.5ms preprocess, 333.6ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 323.9ms
+Speed: 1.5ms preprocess, 323.9ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.25362852215766907, Restart match: 0.2147892564535141
+Step 8: Action=0, Reward=1.0, Dead=False, Attempts=13
+
+0: 416x640 1 block, 1 player, 1 spike, 312.3ms
+Speed: 1.2ms preprocess, 312.3ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24599380791187286, Restart match: 0.2172248661518097
+Step 9: Action=0, Reward=1.0, Dead=False, Attempts=13
+
+0: 416x640 1 block, 1 player, 1 spike, 316.9ms
+Speed: 1.4ms preprocess, 316.9ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.25570422410964966, Restart match: 0.19667477905750275
+Step 10: Action=1, Reward=1.0, Dead=False, Attempts=13
+
+0: 416x640 1 block, 1 player, 2 spikes, 312.6ms
+Speed: 1.4ms preprocess, 312.6ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2521577775478363, Restart match: 0.18741601705551147
+Step 11: Action=0, Reward=1.0, Dead=False, Attempts=13
+
+0: 416x640 1 block, 1 player, 2 spikes, 319.8ms
+Speed: 1.3ms preprocess, 319.8ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24794356524944305, Restart match: 0.19527018070220947
+Step 12: Action=1, Reward=1.0, Dead=False, Attempts=13
+
+0: 416x640 1 block, 8 players, 2 spikes, 313.7ms
+Speed: 1.5ms preprocess, 313.7ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2944493889808655, Restart match: 0.23739522695541382
+Step 13: Action=0, Reward=1.0, Dead=False, Attempts=13
+
+0: 416x640 2 blocks, 2 players, 2 portals, 2 spikes, 314.5ms
+Speed: 1.2ms preprocess, 314.5ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.9560602903366089, Restart match: 0.9587276577949524
+Step 14: Action=0, Reward=-100.0, Dead=True, Attempts=13
+
+0: 416x640 1 coin, 1 player, 2 portals, 2 spikes, 424.5ms
+Speed: 5.6ms preprocess, 424.5ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 1 player, 440.6ms
+Speed: 1.6ms preprocess, 440.6ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.23676419258117676, Restart match: 0.21333321928977966
+Step 15: Action=1, Reward=1.0, Dead=False, Attempts=14
+
+0: 416x640 1 block, 1 player, 1 spaceship, 1 spike, 310.7ms
+Speed: 1.5ms preprocess, 310.7ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2504604756832123, Restart match: 0.20608684420585632
+Step 16: Action=1, Reward=1.0, Dead=False, Attempts=14
+
+0: 416x640 1 block, 4 players, 1 spike, 316.9ms
+Speed: 1.4ms preprocess, 316.9ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24789904057979584, Restart match: 0.2251058965921402
+Step 17: Action=1, Reward=1.0, Dead=False, Attempts=14
+
+0: 416x640 2 blocks, 1 coin, 6 players, 2 portals, 1 spike, 315.2ms
+Speed: 1.5ms preprocess, 315.2ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24748551845550537, Restart match: 0.38712573051452637
+Step 18: Action=1, Reward=1.0, Dead=False, Attempts=14
+
+0: 416x640 1 block, 2 players, 393.8ms
+Speed: 1.4ms preprocess, 393.8ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2408292591571808, Restart match: 0.2251977175474167
+Step 19: Action=0, Reward=1.0, Dead=False, Attempts=14
+
+0: 416x640 1 block, 1 player, 1 spike, 314.6ms
+Speed: 1.6ms preprocess, 314.6ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2569015324115753, Restart match: 0.21499836444854736
+Step 20: Action=1, Reward=1.0, Dead=False, Attempts=14
+
+0: 416x640 1 block, 3 players, 1 spike, 315.5ms
+Speed: 1.5ms preprocess, 315.5ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.27896836400032043, Restart match: 0.237685427069664
+Step 21: Action=0, Reward=1.0, Dead=False, Attempts=14
+
+0: 416x640 2 blocks, 1 coin, 1 player, 2 portals, 2 spaceships, 1 spike, 320.0ms
+Speed: 1.4ms preprocess, 320.0ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.8504452109336853, Restart match: 0.8362916707992554
+Step 22: Action=0, Reward=-100.0, Dead=True, Attempts=14
+
+0: 416x640 1 coin, 1 player, 2 portals, 1 spike, 337.9ms
+Speed: 4.4ms preprocess, 337.9ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 314.8ms
+Speed: 1.3ms preprocess, 314.8ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2547588348388672, Restart match: 0.22060267627239227
+Step 23: Action=0, Reward=1.0, Dead=False, Attempts=15
+
+0: 416x640 1 block, 1 player, 1 spike, 312.8ms
+Speed: 1.5ms preprocess, 312.8ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24115602672100067, Restart match: 0.22641217708587646
+Step 24: Action=1, Reward=1.0, Dead=False, Attempts=15
+
+0: 416x640 1 block, 1 player, 1 spike, 316.4ms
+Speed: 1.6ms preprocess, 316.4ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2433132827281952, Restart match: 0.2143513709306717
+Step 25: Action=1, Reward=1.0, Dead=False, Attempts=15
+
+0: 416x640 1 block, 1 player, 1 spike, 312.3ms
+Speed: 1.4ms preprocess, 312.3ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24575452506542206, Restart match: 0.20634321868419647
+Step 26: Action=0, Reward=1.0, Dead=False, Attempts=15
+
+0: 416x640 1 block, 1 player, 2 spikes, 311.7ms
+Speed: 1.4ms preprocess, 311.7ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2443961650133133, Restart match: 0.20686113834381104
+Step 27: Action=0, Reward=1.0, Dead=False, Attempts=15
+
+0: 416x640 1 block, 8 players, 2 spikes, 315.7ms
+Speed: 1.4ms preprocess, 315.7ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2745034396648407, Restart match: 0.22873644530773163
+Step 28: Action=1, Reward=1.0, Dead=False, Attempts=15
+
+0: 416x640 1 block, 1 coin, 3 players, 2 portals, 1 spaceship, 320.6ms
+Speed: 1.4ms preprocess, 320.6ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.9166214466094971, Restart match: 0.9216932654380798
+Step 29: Action=0, Reward=-100.0, Dead=True, Attempts=15
+
+0: 416x640 1 coin, 1 player, 2 portals, 2 spikes, 324.5ms
+Speed: 5.2ms preprocess, 324.5ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 313.3ms
+Speed: 1.3ms preprocess, 313.3ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.26012325286865234, Restart match: 0.22949451208114624
+Step 30: Action=1, Reward=1.0, Dead=False, Attempts=16
+
+0: 416x640 1 block, 1 player, 1 spike, 311.6ms
+Speed: 1.5ms preprocess, 311.6ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.223541721701622, Restart match: 0.2249109447002411
+Step 31: Action=0, Reward=1.0, Dead=False, Attempts=16
+
+0: 416x640 1 block, 1 player, 1 spike, 315.8ms
+Speed: 1.5ms preprocess, 315.8ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24692004919052124, Restart match: 0.21039865911006927
+Step 32: Action=1, Reward=1.0, Dead=False, Attempts=16
+
+0: 416x640 1 block, 1 player, 1 spike, 312.1ms
+Speed: 1.2ms preprocess, 312.1ms inference, 1.0ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24888120591640472, Restart match: 0.20804058015346527
+Step 33: Action=1, Reward=1.0, Dead=False, Attempts=16
+
+0: 416x640 1 block, 1 player, 2 spikes, 318.7ms
+Speed: 1.5ms preprocess, 318.7ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2471386343240738, Restart match: 0.203916996717453
+Step 34: Action=0, Reward=1.0, Dead=False, Attempts=16
+
+0: 416x640 1 block, 3 players, 2 spikes, 309.6ms
+Speed: 1.4ms preprocess, 309.6ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2872375249862671, Restart match: 0.24163423478603363
+Step 35: Action=1, Reward=1.0, Dead=False, Attempts=16
+
+0: 416x640 1 block, 1 coin, 3 players, 2 portals, 3 spikes, 315.0ms
+Speed: 1.4ms preprocess, 315.0ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.8504186868667603, Restart match: 0.8363498449325562
+Step 36: Action=1, Reward=-100.0, Dead=True, Attempts=16
+
+0: 416x640 1 block, 1 coin, 2 players, 2 portals, 1 spike, 334.4ms
+Speed: 4.8ms preprocess, 334.4ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 304.0ms
+Speed: 1.5ms preprocess, 304.0ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2386893928050995, Restart match: 0.20593604445457458
+Step 37: Action=0, Reward=1.0, Dead=False, Attempts=17
+
+0: 416x640 1 block, 1 player, 1 spike, 319.7ms
+Speed: 1.4ms preprocess, 319.7ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24499350786209106, Restart match: 0.22581852972507477
+Step 38: Action=1, Reward=1.0, Dead=False, Attempts=17
+
+0: 416x640 1 block, 1 player, 1 spike, 315.7ms
+Speed: 1.5ms preprocess, 315.7ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24855545163154602, Restart match: 0.2153456062078476
+Step 39: Action=1, Reward=1.0, Dead=False, Attempts=17
+
+0: 416x640 1 block, 2 players, 1 spike, 309.5ms
+Speed: 1.5ms preprocess, 309.5ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2665863037109375, Restart match: 0.22873230278491974
+Step 40: Action=0, Reward=1.0, Dead=False, Attempts=17
+
+0: 416x640 2 blocks, 3 players, 2 portals, 1 spaceship, 1 spike, 313.5ms
+Speed: 1.5ms preprocess, 313.5ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.9592146873474121, Restart match: 0.9579436779022217
+Step 41: Action=0, Reward=-100.0, Dead=True, Attempts=17
+
+0: 416x640 1 block, 1 coin, 1 player, 2 portals, 1 spike, 334.8ms
+Speed: 5.5ms preprocess, 334.8ms inference, 0.8ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 323.8ms
+Speed: 1.3ms preprocess, 323.8ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24766187369823456, Restart match: 0.21142221987247467
+Step 42: Action=0, Reward=1.0, Dead=False, Attempts=18
+
+0: 416x640 1 block, 1 player, 1 spike, 317.5ms
+Speed: 1.5ms preprocess, 317.5ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2311779260635376, Restart match: 0.21923238039016724
+Step 43: Action=0, Reward=1.0, Dead=False, Attempts=18
+
+0: 416x640 1 block, 1 player, 1 spike, 311.5ms
+Speed: 1.6ms preprocess, 311.5ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24496448040008545, Restart match: 0.20894967019557953
+Step 44: Action=0, Reward=1.0, Dead=False, Attempts=18
+
+0: 416x640 1 block, 6 players, 1 spike, 310.6ms
+Speed: 1.5ms preprocess, 310.6ms inference, 0.9ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.24848230183124542, Restart match: 0.20599067211151123
+Step 45: Action=0, Reward=1.0, Dead=False, Attempts=18
+
+0: 416x640 2 blocks, 1 coin, 2 players, 2 portals, 1 spaceship, 1 spike, 321.4ms
+Speed: 1.2ms preprocess, 321.4ms inference, 1.0ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.9999248385429382, Restart match: 0.999941885471344
+Step 46: Action=1, Reward=-100.0, Dead=True, Attempts=18
+
+0: 416x640 2 blocks, 1 coin, 1 player, 2 portals, 1 spike, 333.6ms
+Speed: 6.1ms preprocess, 333.6ms inference, 0.6ms postprocess per image at shape (1, 3, 416, 640)
+
+0: 416x640 1 block, 316.7ms
+Speed: 1.3ms preprocess, 316.7ms inference, 0.7ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.25036299228668213, Restart match: 0.22296003997325897
+Step 47: Action=0, Reward=1.0, Dead=False, Attempts=19
+
+0: 416x640 1 block, 1 player, 1 spike, 318.8ms
+Speed: 1.3ms preprocess, 318.8ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2543319761753082, Restart match: 0.21915270388126373
+Step 48: Action=0, Reward=1.0, Dead=False, Attempts=19
+
+0: 416x640 1 block, 1 player, 1 spike, 315.3ms
+Speed: 1.5ms preprocess, 315.3ms inference, 0.5ms postprocess per image at shape (1, 3, 416, 640)
+Menu match: 0.2364790141582489, Restart match: 0.1963178813457489
+Step 49: Action=0, Reward=1.0, Dead=False, Attempts=19
+Game completed successfully
