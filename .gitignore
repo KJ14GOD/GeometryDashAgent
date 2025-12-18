@@ -22,3 +22,5 @@ venv/
 # IDE
 .idea/
 .vscode/
+
+GEOMETRY_DASH_RL_PLAN.md
