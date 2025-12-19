@@ -5,6 +5,7 @@ A reinforcement learning agent that learns to play Geometry Dash using computer 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Demo](#demo)
 - [How It Works](#how-it-works)
 - [Project Structure](#project-structure)
 - [Requirements](#requirements)
@@ -26,6 +27,126 @@ This project creates an AI agent that learns to play and beat Geometry Dash by:
 4. Using imitation learning and reinforcement learning (PPO) to learn when to jump
 
 The agent observes the game through an 84-dimensional state vector that encodes player position, velocity, and information about the 6 nearest obstacles ahead.
+
+## Demo
+
+This project uses imitation learning to bootstrap the policy with human actions, then reinforcement learning (PPO) to refine timing and recovery. The biggest data issue was skipped frames during preprocessing; decoupling keyboard capture from YOLO inference fixed that and brought capture up to ~42 FPS with consistent action labels.
+
+### 1) YOLO perception
+
+![YOLO detection](assets/yolo.png)
+
+### 2) Gymnasium environment rewards
+
+![Alive reward](assets/env_alive_reward.png)
+![Death reward](assets/env_death_reward.png)
+
+### 3) Imitation capture (actions + frames)
+
+This capture runs without YOLO for speed, then YOLO runs offline to build the state vectors for imitation learning.
+
+```
+==================================================
+EXPERT DATA SUMMARY
+==================================================
+
+Keys in file: ['actions', 'timestamps']
+
+Actions shape: (9538,)
+Timestamps shape: (9538,)
+
+Total frames captured: 9538
+Total jumps (action=1): 2937
+Total no-jump (action=0): 6601
+Jump percentage: 30.8%
+
+==================================================
+TIMING STATS
+==================================================
+Total duration: 224.26 seconds
+Average FPS: 42.5
+First timestamp: 1766114201.761
+Last timestamp: 1766114426.017
+Average frame interval: 23.5ms
+Min frame interval: 19.8ms
+Max frame interval: 140.1ms
+
+==================================================
+SAMPLE DATA
+==================================================
+
+First 10 actions: [0 0 0 0 0 0 0 0 0 0]
+Last 10 actions: [0 0 0 0 0 0 0 0 0 0]
+
+==================================================
+ACTION SEQUENCES
+==================================================
+First 10 jump frame indices: [25 26 27 28 29 30 31 32 33 34]
+Total jump sequences: 2937
+Found consecutive jump frames (holding spacebar)
+
+==================================================
+DETAILED FRAME LOG (first 50 frames)
+==================================================
+Frame    0 | ---- | Time: 0.000s
+Frame    1 | ---- | Time: 0.112s
+Frame    2 | ---- | Time: 0.137s
+Frame    3 | ---- | Time: 0.160s
+Frame    4 | ---- | Time: 0.183s
+Frame    5 | ---- | Time: 0.207s
+Frame    6 | ---- | Time: 0.231s
+Frame    7 | ---- | Time: 0.253s
+Frame    8 | ---- | Time: 0.277s
+Frame    9 | ---- | Time: 0.301s
+Frame   10 | ---- | Time: 0.324s
+Frame   11 | ---- | Time: 0.348s
+Frame   12 | ---- | Time: 0.372s
+Frame   13 | ---- | Time: 0.395s
+Frame   14 | ---- | Time: 0.418s
+Frame   15 | ---- | Time: 0.441s
+Frame   16 | ---- | Time: 0.465s
+Frame   17 | ---- | Time: 0.488s
+Frame   18 | ---- | Time: 0.510s
+Frame   19 | ---- | Time: 0.533s
+Frame   20 | ---- | Time: 0.556s
+Frame   21 | ---- | Time: 0.580s
+Frame   22 | ---- | Time: 0.603s
+Frame   23 | ---- | Time: 0.625s
+Frame   24 | ---- | Time: 0.647s
+Frame   25 | JUMP | Time: 0.670s
+Frame   26 | JUMP | Time: 0.692s
+Frame   27 | JUMP | Time: 0.714s
+Frame   28 | JUMP | Time: 0.737s
+Frame   29 | JUMP | Time: 0.759s
+Frame   30 | JUMP | Time: 0.783s
+Frame   31 | JUMP | Time: 0.806s
+Frame   32 | JUMP | Time: 0.828s
+Frame   33 | JUMP | Time: 0.851s
+Frame   34 | JUMP | Time: 0.875s
+Frame   35 | JUMP | Time: 0.898s
+Frame   36 | JUMP | Time: 0.921s
+Frame   37 | JUMP | Time: 0.944s
+Frame   38 | JUMP | Time: 0.968s
+Frame   39 | JUMP | Time: 0.991s
+Frame   40 | JUMP | Time: 1.015s
+Frame   41 | JUMP | Time: 1.038s
+Frame   42 | JUMP | Time: 1.061s
+Frame   43 | JUMP | Time: 1.084s
+Frame   44 | JUMP | Time: 1.108s
+Frame   45 | JUMP | Time: 1.132s
+Frame   46 | JUMP | Time: 1.155s
+Frame   47 | JUMP | Time: 1.179s
+Frame   48 | JUMP | Time: 1.201s
+Frame   49 | JUMP | Time: 1.223s
+
+(Showing 50/9538 frames)
+
+==================================================
+FILES CREATED
+==================================================
+Frames saved to: data/expert_frames/ (frame_0.jpg to frame_9537.jpg)
+Actions and timestamps saved to: data/imitation_data.npz
+```
 
 ## How It Works
 
