@@ -19,6 +19,13 @@ venv/
 # Videos (large files)
 *.mp4
 
+# Local data captures
+data/expert_frames/
+data/images/
+data/test/
+data/train/
+data/valid/
+
 # IDE
 .idea/
 .vscode/

@@ -95,6 +95,9 @@ geometry-dash/
 |   |-- test/                 # Test images and labels
 |   |-- images/               # Reference images (menu, restart screens)
 |   |-- data.yaml             # YOLO dataset configuration
+|   |-- expert_frames/        # Captured gameplay frames (local, ignored)
+|   |-- imitation_data.npz    # Actions + timestamps (local, ignored)
+|   |-- expert_data.npz       # State/action dataset (local, ignored)
 |
 |-- runs/                      # YOLO training outputs
 |   |-- geometry_dash_detector_v3/
@@ -109,6 +112,28 @@ geometry-dash/
 - macOS (tested on macOS 14+) or Linux
 - Geometry Dash running in a window
 - Screen recording permissions for your terminal/IDE
+
+## Local Data (Generated)
+
+These files are created locally and ignored by git:
+
+- `data/expert_frames/`: Raw frames captured during gameplay.
+- `data/imitation_data.npz`: Per-frame action labels + timestamps.
+- `data/expert_data.npz`: Final IL dataset (state vectors + actions).
+
+### How to Generate
+
+1. Capture actions + frames (no YOLO during play):
+```bash
+python imitation/action_data.py
+```
+
+2. Process frames offline into state vectors:
+```bash
+python imitation/state_data.py
+```
+
+Tip: Trim the initial black screen and end-of-level screen during offline processing to avoid skewing the dataset.
 
 ### System Dependencies
 
@@ -161,6 +186,14 @@ These `.pt` files contain the trained neural network weights:
 | File | Description |
 |------|-------------|
 | `*.mp4` | Recorded gameplay and detection visualizations |
+
+### Local Data Captures (Generated)
+
+| Path | Description |
+|------|-------------|
+| `data/expert_frames/` | Raw gameplay frames captured locally |
+| `data/imitation_data.npz` | Actions + timestamps from keyboard capture |
+| `data/expert_data.npz` | Processed state/action dataset for IL |
 
 ### To Download Base YOLO Weights
 
