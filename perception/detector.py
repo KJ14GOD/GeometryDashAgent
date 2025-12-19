@@ -21,7 +21,7 @@ class Detector:
         if len(frame.shape) == 2:  # Grayscale (1 channel)
             frame = cv.cvtColor(frame, cv.COLOR_GRAY2BGR)
         # Frame is now BGR (3 channels) - YOLO can process it
-        results = self.model(frame)
+        results = self.model(frame, verbose=False)
         return results
 
     # def detect_player(self, frame):
