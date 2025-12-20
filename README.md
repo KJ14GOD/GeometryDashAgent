@@ -148,6 +148,9 @@ Frames saved to: data/expert_frames/ (frame_0.jpg to frame_9537.jpg)
 Actions and timestamps saved to: data/imitation_data.npz
 ```
 
+Check the colab notebook inside of imitation/Imitation_Learning_Geometry_Dash.ipynb for metrics and plots of the trained feed forward supervised neural network.
+The data for the neural network comes from the state action pairs to determine when to jump versus when not to jump
+
 ## How It Works
 
 ```
