@@ -35,15 +35,30 @@ def test_imitation():
 
     env = GeometryDashEnv()
     state, _ = env.reset()
+    stats_window = 200
+    state_buffer = []
 
     try:
         while True:
+            state_buffer.append(state)
+            if len(state_buffer) == stats_window:
+                states_np = torch.tensor(state_buffer, dtype=torch.float32)
+                print(
+                    f"Live state stats (last {stats_window}): "
+                    f"min={states_np.min().item():.4f} "
+                    f"max={states_np.max().item():.4f} "
+                    f"mean={states_np.mean().item():.4f}"
+                )
+                state_buffer.clear() 
+
             state_tensor = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
             with torch.no_grad():
                 logits = model(state_tensor)
                 action = torch.argmax(logits, dim=1).item()
 
+            print(f"Action: {action}")
             state, _, terminated, truncated, _ = env.step(action)
+            
             if terminated or truncated:
                 state, _ = env.reset()
     except KeyboardInterrupt:

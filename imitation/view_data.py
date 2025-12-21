@@ -56,7 +56,7 @@ else:
 print("\n" + "=" * 50)
 print("DETAILED FRAME LOG (first 50 frames)")
 print("=" * 50)
-show_frames = min(100, len(actions))
+show_frames = min(50, len(actions))
 for i in range(show_frames):
     action_str = "JUMP" if actions[i] == 1 else "----"
     state_preview = states[i][:6]

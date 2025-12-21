@@ -15,6 +15,3 @@ class ActionExecutor:
             self.keyboard.press(Key.space)
         elif action == 0:
             self.keyboard.release(Key.space)
-
-
-   
