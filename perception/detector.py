@@ -4,7 +4,7 @@ import cv2 as cv
 
 class Detector:
     # def __init__(self, model_path='../models/roboflow_model/weights.pt'):
-    def __init__(self, model_path='models/roboflow_model/weights.pt'):
+    def __init__(self, model_path='models/roboflow_model/weights.pt', imgsz=640, classes=None):
         """
         Initialize detector with trained YOLO model.
         
@@ -13,6 +13,9 @@ class Detector:
         """
         print(f"Loading YOLO Model from: {model_path}")
         self.model = YOLO(model_path)
+        self.model.to('mps')
+        self.imgsz = imgsz
+        self.classes = classes
         print("YOLO model loaded!")
     
     def detect(self, frame):
@@ -21,7 +24,7 @@ class Detector:
         if len(frame.shape) == 2:  # Grayscale (1 channel)
             frame = cv.cvtColor(frame, cv.COLOR_GRAY2BGR)
         # Frame is now BGR (3 channels) - YOLO can process it
-        results = self.model(frame, verbose=False)
+        results = self.model(frame, verbose=False, imgsz=self.imgsz, classes=self.classes)
         return results
 
     # def detect_player(self, frame):
@@ -30,4 +33,3 @@ class Detector:
     #         print("No player found")
     #         return None
         
-

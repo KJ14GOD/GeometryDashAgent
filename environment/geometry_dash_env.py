@@ -25,23 +25,24 @@ class GeometryDashEnv(gym.Env):
         print("Initializing Geometry Dash Environment...")
         monitor = {"top": 70, "left": 85, "width": 1295, "height": 810}
         self.cap = ScreenCapture(monitor_region=monitor, target_fps=60, resize=None, normalize=False, grayscale=False)
-        self.detector = Detector()
+        self.detector = Detector(classes=[3, 6])
         self.extractor = FeatureExtractor(monitor['width'], monitor['height'])
         self.executor = ActionExecutor()
         self.current_state = None
         self.last_frame = None
         self.attempts = 0
-        self.frame_count = 0 
-        self.bonus_reward = 50 
+        self.steps = 0 
+        self.episode_reward = 0.0
+        self.last_infer_ms = 0.0
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         # when dying the game will show the menu screen press space to restart the level
         self.executor.restart_level()
         self.attempts += 1
-        self.frame_count = 0 
-        self.bonus_reward = 50 
-        
+        self.steps = 0 
+        self.episode_reward = 0.0
+
         # Retry logic to ensure player is detected after restart
         max_retries = 10
         for attempt in range(max_retries):
@@ -68,13 +69,20 @@ class GeometryDashEnv(gym.Env):
 
 
     def step(self, action):
+        self.steps += 1
         self.executor.act(action) # perform the action
-        self.frame_count += 1 
         frame = self.cap.capture_and_preprocess() # next frame to detect the obstacles
         self.last_frame = frame
+
+        start_time = time.time()
         detections = self.detector.detect(frame) # detect the obstacles in the next frame
+        infer_ms = (time.time() - start_time) * 1000.0
+        self.last_infer_ms = infer_ms
+        print(f"YOLO inference {infer_ms:.1f}ms")
+       
+
         player_pos, obstacles_ahead, normalized_features = self.extractor.extract(detections) # extract the features from the next frame
-        
+
         observation = normalized_features["state_vector"] # next state vector
         self.current_state = observation # new state vector
 
@@ -102,23 +110,20 @@ class GeometryDashEnv(gym.Env):
         # else:
         #     terminated = False
         terminated = self.check_death(frame)
-
-        survival_time = self.frame_count / 60 # convert frames to seconds
-
         truncated = False # we don't need truncate for this environment
-
         if terminated:
-            reward = -100.0
+            reward = 0.0
             self.executor.act(0) 
-        else:
-            reward = 1.0 
+        else:   
+            reward = 1.0
 
-            if survival_time % 10 == 0:
-                reward = self.bonus_reward + reward
-                self.bonus_reward = min(self.bonus_reward + 25, 100)
             
         
+        self.episode_reward += reward
+        if terminated:
+            print(f"Episode reward: {self.episode_reward:.2f}")
         return observation, reward, terminated, truncated, info # gymnasium format
+
 
     def check_death(self, frame):
         menu_template = cv.imread("data/images/menu.png", 0)
@@ -201,8 +206,8 @@ if __name__ == "__main__":
             overlay = raw_env.last_frame.copy()
 
             text1 = f"Step {i} | Action {action} | Reward {reward:.1f}"
-            text2 = f"Terminated {terminated} | Obstacles {len(info['obstacles_ahead'])}"
-            text3 = f"Attempt {raw_env.attempts}"
+            text2 = f"Cumulative {raw_env.episode_reward:.1f} | Terminated {terminated}"
+            text3 = f"Attempt {raw_env.attempts} | Obstacles {len(info['obstacles_ahead'])}"
             cv.putText(overlay, text1, (10, 30), cv.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
             cv.putText(overlay, text2, (10, 60), cv.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
             cv.putText(overlay, text3, (10, 90), cv.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 255), 2)
