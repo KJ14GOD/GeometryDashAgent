@@ -4,29 +4,19 @@ from stable_baselines3 import PPO
 from stable_baselines3.common.torch_layers import BaseFeaturesExtractor
 from stable_baselines3.common.callbacks import CheckpointCallback, BaseCallback
 import gymnasium as gym
-from gymnasium import spaces
 import numpy as np
 import time
 import sys
 import os
-
-# Add parent directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from environment.geometry_dash_env import GeometryDashEnv
   
 
 class ImitationFeaturesExtractor(BaseFeaturesExtractor):
     """
     Custom feature extractor that matches the imitation learning model architecture.
-    
-    Imitation model: 84 → 256 → 256 → 2
-    We extract:      84 → 256 → 256 (features_dim=256)
-    PPO adds:                       → action_net(2) + value_net(1)
     """
     def __init__(self, observation_space: gym.spaces.Box, features_dim: int = 256):
         super().__init__(observation_space, features_dim)
-        
         self.net = nn.Sequential(
             nn.Linear(84, 256),
             nn.ReLU(),
@@ -40,8 +30,7 @@ class ImitationFeaturesExtractor(BaseFeaturesExtractor):
 
 class FrameSkipWrapper(gym.Wrapper):
     """
-    Repeat action for N frames to speed up training.
-    Returns max reward and last observation.
+    Skip frames to speed up training.
     """
     def __init__(self, env, skip: int = 4):
         super().__init__(env)
@@ -65,10 +54,8 @@ class FrameSkipWrapper(gym.Wrapper):
 def load_imitation_weights_full(model: PPO, imitation_path: str) -> bool:
     """
     Load FULL imitation learning weights into PPO:
-    - Feature extractor (84→256→256)
-    - Action network (256→2)
-    
-    Returns True if successful, False otherwise.
+    - Feature extractor (84 → 256 → 256)
+    - Action network (256 → 2)
     """
     try:
         imitation_state_dict = torch.load(imitation_path, map_location="cpu", weights_only=True)
@@ -82,14 +69,12 @@ def load_imitation_weights_full(model: PPO, imitation_path: str) -> bool:
             'net.2.bias': imitation_state_dict['neural_network.3.bias'],
         }
         features_extractor.load_state_dict(fe_state_dict)
-        print(f"  ✓ Loaded feature extractor weights (84→256→256)")
+        print(f"✓ Loaded feature extractor weights (84→256→256)")
         
-        # === Load Action Network ===
-        # IL model: neural_network.6 is Linear(256, 2)
-        # PPO model: action_net is Linear(256, 2) when net_arch=dict(pi=[], vf=[])
+        # neural_network.6 contains final action network weights
         action_net = model.policy.action_net
         
-        # Check shapes match
+        # Check if shapes match
         il_weight = imitation_state_dict['neural_network.6.weight']
         il_bias = imitation_state_dict['neural_network.6.bias']
         
@@ -98,7 +83,7 @@ def load_imitation_weights_full(model: PPO, imitation_path: str) -> bool:
             action_net.bias.data = il_bias.clone()
             print(f"  ✓ Loaded action network weights (256→2)")
         else:
-            print(f"  ⚠ Shape mismatch: IL={il_weight.shape}, PPO={action_net.weight.shape}")
+            print(f"  Shape mismatch: IL={il_weight.shape}, PPO={action_net.weight.shape}")
             print(f"    Action network NOT loaded")
             return False
         
@@ -141,22 +126,9 @@ def train(
     save_freq: int = 10_000,
     log_dir: str = "logs/ppo_geometry_dash",
     model_dir: str = "rl/models",
-    frame_skip: int = 2,
+    frame_skip: int = 1,
     resume_path: str = None,
 ):
-    """
-    Train PPO agent on Geometry Dash.
-    
-    Args:
-        total_timesteps: Total training steps
-        load_imitation: Whether to load imitation learning weights
-        imitation_path: Path to imitation model weights
-        save_freq: How often to save checkpoints (in timesteps)
-        log_dir: Directory for TensorBoard logs
-        model_dir: Directory to save model checkpoints
-        frame_skip: Number of frames to repeat each action (1=no skip, 4=common)
-        resume_path: Path to saved model to resume training from
-    """
     print("=" * 60)
     print("PPO Training for Geometry Dash")
     print("=" * 60)
@@ -196,7 +168,6 @@ def train(
         # Define policy kwargs - NO extra layers so action_net is directly 256→2
         policy_kwargs = dict(
             features_extractor_class=ImitationFeaturesExtractor,
-            features_extractor_kwargs=dict(features_dim=256),
             net_arch=dict(pi=[], vf=[]),  # No extra layers! Direct 256→2
         )
           
@@ -218,7 +189,7 @@ def train(
             verbose=1,
             tensorboard_log=log_dir,
             policy_kwargs=policy_kwargs,
-            device="auto",
+            device="cpu",
         )
         
         # Load imitation weights if requested
@@ -257,6 +228,7 @@ def train(
             total_timesteps=total_timesteps,
             callback=[checkpoint_callback, infer_callback],
             progress_bar=True,
+            reset_num_timesteps=not bool(resume_path),
         )
         
         # Save final model
@@ -280,7 +252,7 @@ if __name__ == "__main__":
     import argparse
     
     parser = argparse.ArgumentParser(description="Train PPO on Geometry Dash")
-    parser.add_argument("--timesteps", type=int, default=100_000, help="Total training timesteps")
+    parser.add_argument("--timesteps", type=int, default=50_000, help="Total training timesteps")
     parser.add_argument("--no-imitation", action="store_true", help="Don't load imitation weights")
     parser.add_argument("--save-freq", type=int, default=10_000, help="Checkpoint frequency")
     parser.add_argument("--frame-skip", type=int, default=1, help="Frames to skip (1=none, 4=recommended)")

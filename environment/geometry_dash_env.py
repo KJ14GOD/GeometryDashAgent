@@ -33,7 +33,7 @@ class GeometryDashEnv(gym.Env):
         self.attempts = 0
         self.steps = 0 
         self.episode_reward = 0.0
-        self.last_infer_ms = 0.0
+        # self.last_infer_ms = 0.0
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
@@ -71,14 +71,15 @@ class GeometryDashEnv(gym.Env):
     def step(self, action):
         self.steps += 1
         self.executor.act(action) # perform the action
+        time.sleep(0.05)  # Wait 50ms for death menu to fully appear if dying
         frame = self.cap.capture_and_preprocess() # next frame to detect the obstacles
         self.last_frame = frame
 
-        start_time = time.time()
+        # start_time = time.time()
         detections = self.detector.detect(frame) # detect the obstacles in the next frame
-        infer_ms = (time.time() - start_time) * 1000.0
-        self.last_infer_ms = infer_ms
-        print(f"YOLO inference {infer_ms:.1f}ms")
+        # infer_ms = (time.time() - start_time) * 1000.0
+        # self.last_infer_ms = infer_ms
+        # print(f"YOLO inference {infer_ms:.1f}ms")
        
 
         player_pos, obstacles_ahead, normalized_features = self.extractor.extract(detections) # extract the features from the next frame
@@ -154,8 +155,10 @@ class GeometryDashEnv(gym.Env):
                 best_restart_match = max(best_restart_match, restart_max_val)
         
         threshold = 0.6
-        print(f"Menu match: {best_menu_match}, Restart match: {best_restart_match}")
-        return best_menu_match > threshold or best_restart_match > threshold
+        is_dead = best_menu_match > threshold or best_restart_match > threshold
+        if is_dead or self.steps % 50 == 0:
+            print(f"Menu match: {best_menu_match:.2f}, Restart match: {best_restart_match:.2f}")
+        return is_dead
     
     def render(self):
         pass
